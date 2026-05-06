@@ -1,9 +1,9 @@
 {
-  "name": "jscode-runner",
-  "displayName": "JS Code Runner",
+  "name": "just-run-it-jscode-runner",
+  "displayName": "JustRunIt JS Code Runner",
   "description": "Run current JavaScript file instantly",
   "version": "1.0.0",
-  "publisher": "av",
+  "publisher": "brahm23",
   "engines": {
     "vscode": "^1.85.0"
   },
