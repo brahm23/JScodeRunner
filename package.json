@@ -1,0 +1,58 @@
+{
+  "name": "jscode-runner",
+  "displayName": "JS Code Runner",
+  "description": "Run current JavaScript file instantly",
+  "version": "1.0.0",
+  "publisher": "av",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+
+  "main": "./extension.js",
+
+  "activationEvents": [
+    "onCommand:jscode-runner.runJSFile"
+  ],
+
+  "contributes": {
+    "commands": [
+      {
+        "command": "jscode-runner.runJSFile",
+        "title": "Run",
+        "icon": {
+          "dark": "media/play.svg",
+          "light": "media/play.svg"
+        }
+      }
+    ],
+
+    "menus": {
+      "editor/title": [
+        {
+          "command": "jscode-runner.runJSFile",
+          "group": "navigation@1",
+          "when": "resourceExtname == .js"
+        }
+      ]
+    },
+
+    "keybindings": [
+      {
+        "command": "jscode-runner.runJSFile",
+        "key": "ctrl+alt+r",
+        "mac": "cmd+alt+r"
+      }
+    ]
+  },
+
+  "scripts": {
+    "package": "vsce package"
+  },
+
+  "devDependencies": {
+    "@types/vscode": "^1.85.0"
+  }
+}
